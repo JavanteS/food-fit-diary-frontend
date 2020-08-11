@@ -10,7 +10,7 @@
   }
   
 
-  fetch("http://localhost:3001/meals")
-  .then(resp => resp.json())
-  .then(meals => console.log(meals))
+//   fetch("http://localhost:3001/meals")
+//   .then(resp => resp.json())
+//   .then(meals => console.log(meals))
   

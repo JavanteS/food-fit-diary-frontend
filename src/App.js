@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {fetchMeals} from "./actions/meals"
+import MealsContainer from "./containers/mealscontainer"
 import './App.css';
 
 class App extends Component {
@@ -16,11 +17,11 @@ class App extends Component {
     <div className="App">
      Food Fit Diary
 
-     
+      
      <ul>
-       {}
+       {meal}
      </ul>
-     
+     <MealsContainer/>
     </div>
   );
   }

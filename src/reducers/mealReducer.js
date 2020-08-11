@@ -3,7 +3,20 @@ export default (state ={
     meals: [], loading: false
 }, action) =>{
     switch(action.type){
-        case "ADD_MEAL":
+
+
+        case "LOADING_MEALS":
+
+        return {
+            ...state, loading: true
+        }
+
+        case "MEALS_LOADED":
+
+        return {
+            ...state, meals: meals,
+            loading: false
+        }
             
 
         default:

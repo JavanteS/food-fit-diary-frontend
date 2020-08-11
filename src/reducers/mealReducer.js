@@ -14,7 +14,7 @@ export default (state ={
         case "MEALS_LOADED":
 
         return {
-            ...state, meals: meals,
+            ...state, meals: action.payload,
             loading: false
         }
             

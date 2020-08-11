@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {fetchMeals} from "./actions/meals"
 import './App.css';
 
 class App extends Component {
 
   componentDidMount(){
-    fetch()
+    this.props.fetchMeals()
   }
 
   render(){
+    debugger
     const meal = this.props.meals.map((meal,i)=> <li key={i}>{meal.name}</li>)
      return (
     <div className="App">
      Food Fit Diary
+
+     
      <ul>
-       {meal}
+       {}
      </ul>
      
     </div>
@@ -30,4 +34,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, {fetchMeals})(App);

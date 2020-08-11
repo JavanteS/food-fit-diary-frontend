@@ -1,13 +1,24 @@
-import React from 'react';
-
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 
-function App() {
-  return (
+class App extends Component {
+
+  render(){
+     return (
     <div className="App">
      Food Fit Diary
     </div>
   );
+  }
+ 
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    meals: state.mealReducer.meals,
+    loading: state.mealReducer.loading
+  }
+}
+
+export default connect(mapStateToProps)(App);

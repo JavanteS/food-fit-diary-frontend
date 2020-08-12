@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   render(){
-    debugger
+    
     const meal = this.props.meals.map((meal,i)=> <li key={i}>{meal.name}</li>)
      return (
     <div className="App">

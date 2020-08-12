@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import MealInput from "../meals/mealinput"
 
 
 class MealsContainer extends Component {
     render(){
-        return 1
+        <div>
+            <MealInput/>
+            
+        </div>
     }
 }
 

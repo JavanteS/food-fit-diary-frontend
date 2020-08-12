@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class MealInput extends Component {
 
@@ -17,7 +18,8 @@ class MealInput extends Component {
 
     }
 
-    handleSubmit=()=>{
+    handleSubmit=(event)=>{
+        event.preventDefault()
 
     }
 
@@ -43,4 +45,9 @@ class MealInput extends Component {
     }
 }
 
-export default MealInput;
+const mapDispatchToProps = dispatch => ({
+    addMeal: name => dispatch({ type: "ADD_MEAL", name }),
+    delete: id=> dispatch({type: "DELETE_MEAL", id})
+  })
+
+export default connect(null, mapDispatchToProps)(MealInput);

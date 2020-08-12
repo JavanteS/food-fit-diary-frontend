@@ -25,7 +25,7 @@ class MealsContainer extends Component {
         return(
            <div>
 
-               <button onClick={this.handleClick}>Add Meal</button>
+               <button type="button" class="btn btn-primary" onClick={this.handleClick}>Add Meal</button>
                {render ? <MealInput/>:null}
             
 

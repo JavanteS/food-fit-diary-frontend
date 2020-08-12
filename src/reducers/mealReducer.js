@@ -17,6 +17,19 @@ export default (state ={
             ...state, meals: action.payload,
             loading: false
         }
+
+        case "ADDING_MEAL":
+
+        return {
+            ...state, loading: true
+        }
+
+        case "MEAL_ADDED":
+
+        return {
+            ...state, meals: [...state.meals, action.payload],
+            loading: false
+        }
             
 
         default:

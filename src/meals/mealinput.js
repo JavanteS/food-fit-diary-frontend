@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {addMeal} from "../actions/meals"
 
 class MealInput extends Component {
 
@@ -7,7 +8,7 @@ class MealInput extends Component {
     state={
         name: "",
         category: "",
-        calories: null
+        calories: ""
 
     }
 
@@ -20,6 +21,13 @@ class MealInput extends Component {
 
     handleSubmit=(event)=>{
         event.preventDefault()
+        const meal = {name: this.state.name, category: this.state.category, calories: this.state.calories}
+        this.props.addMeal(meal)
+        this.setState({
+            name: "",
+            category: "",
+            calories: ""
+        })
 
     }
 
@@ -28,7 +36,7 @@ class MealInput extends Component {
         return (
 
             <div>
-               <form>
+               <form onSubmit={this.handleSubmit}>
                 <label>Name</label>
                 <input type="text" onChange={this.handleChange} value={this.state.name} name="name"/>
                 
@@ -45,9 +53,9 @@ class MealInput extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => ({
-    addMeal: name => dispatch({ type: "ADD_MEAL", name }),
-    delete: id=> dispatch({type: "DELETE_MEAL", id})
-  })
+// const mapDispatchToProps = dispatch => ({
+//     addMeal: name => dispatch({ type: "ADD_MEAL", name }),
+//     delete: id=> dispatch({type: "DELETE_MEAL", id})
+//   })
 
-export default connect(null, mapDispatchToProps)(MealInput);
+export default connect(null, {addMeal})(MealInput);

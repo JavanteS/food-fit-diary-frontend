@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {fetchMeals, deleteMeal} from "./actions/meals"
 import MealsContainer from "./containers/mealscontainer"
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -15,12 +16,9 @@ class App extends Component {
    
      return (
     <div className="App">
-     Food Fit Diary
-
-      
-     
-      
-     
+     <nav className="navbar navbar-light bg-light">
+     <h2>Food-fit-diary</h2>
+     </nav>
      <MealsContainer deleteMeal={this.props.deleteMeal} meals={this.props.meals}/>
     </div>
   );

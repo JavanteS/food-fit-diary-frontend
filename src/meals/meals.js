@@ -11,9 +11,9 @@ class Meals extends Component {
         return (
 
             <div className="container-md">
-            
-            {this.props.meals.map((meal,index)=> <Meal key={index} meal={meal} deleteMeal={this.props.deleteMeal} />)}
-            
+                <div className="card">
+                 {this.props.meals.map((meal,index)=> <Meal key={index} meal={meal} deleteMeal={this.props.deleteMeal} />)}
+                </div>
             </div>
 
             // <table className="table">

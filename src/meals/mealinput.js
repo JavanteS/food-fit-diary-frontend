@@ -34,7 +34,7 @@ class MealInput extends Component {
     render(){
         return (
             <div className="col-6 mx-auto">
-                <div className="shadow-sm p-3 mb-5 bg-white rounded">
+                <div className="shadow-sm p-3 mb-5 ">
                     <div className="card h-100 justify-content-center" >
                         <div className="card-header">
                             Add a Meal

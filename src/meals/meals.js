@@ -10,10 +10,10 @@ class Meals extends Component {
     render(){
         return (
 
-            <div class="container-md">
-            <ul>
+            <div className="container-md">
+            
             {this.props.meals.map(meal=> <Meal key={meal.id} meal={meal} deleteMeal={this.props.deleteMeal} />)}
-            </ul>
+            
             </div>
 
             // <table className="table">

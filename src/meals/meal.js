@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class Meal extends Component {
 
-    handleClick=()=>{
+    handleClick=(event)=>{
+        this.props.deleteMeal(event.target.id)
 
     }
     render(){

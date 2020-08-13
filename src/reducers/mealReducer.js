@@ -30,6 +30,19 @@ export default (state ={
             ...state, meals: [...state.meals, action.payload],
             loading: false
         }
+
+        case "DELETING_MEAL":
+
+        return {
+            ...state, loading: true
+        }
+
+        case "MEAL_DELETED":
+
+        return {
+            ...state, meals: [state.meals.filter(meal => meal.id !== action.payload)],
+            loading: false
+        }
             
 
         default:

@@ -54,7 +54,7 @@ class MealInput extends Component {
                                 <label>Calories</label>
                                 <input type="text" className="form-control" onChange={this.handleChange} value={this.state.calories} name="calories"/>
              
-
+                                <hr/>
                                 <input className="btn btn-primary" type="submit"/>
                                 </form>
                                 </div> 

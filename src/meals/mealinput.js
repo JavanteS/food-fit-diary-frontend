@@ -34,7 +34,7 @@ class MealInput extends Component {
     render(){
         return (
             <div className="col-6 mx-auto">
-                <div className="shadow-sm p-3 mb-5 ">
+                <div className="shadow p-3 mb-5 ">
                     <div className="card h-100 justify-content-center" >
                         <div className="card-header">
                             Add a Meal
@@ -43,15 +43,15 @@ class MealInput extends Component {
                                 <form onSubmit={this.handleSubmit}>
 
                                 <label>Name</label>
-                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.name} name="name"/>
+                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.name} name="name" placeholder="Meal's Name"/>
                 
                                 <label>Category</label>
-                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.category} name="category"/>
+                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.category} name="category" placeholder="Category"/>
                 
 
                 
                                 <label>Calories</label>
-                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.calories} name="calories"/>
+                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.calories} name="calories" placeholder="Calories"/>
              
                                 <hr/>
                                 <input className="btn btn-primary" type="submit"/>

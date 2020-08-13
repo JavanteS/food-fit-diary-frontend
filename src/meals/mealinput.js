@@ -34,20 +34,33 @@ class MealInput extends Component {
 
     render(){
         return (
+            <div className="col-6 mx-auto">
+                <div className="shadow-sm p-3 mb-5 bg-white rounded">
+                    <div className="card h-100 justify-content-center" >
+                        <div className="card-header">
+                            Add a Meal
+                        </div>
+                            <div className="card-body">
+                                <form onSubmit={this.handleSubmit}>
 
-            <div>
-               <form onSubmit={this.handleSubmit}>
-                <label>Name</label>
-                <input type="text" onChange={this.handleChange} value={this.state.name} name="name"/>
+                                <label>Name</label>
+                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.name} name="name"/>
                 
-                <label>Category</label>
-                <input type="text" onChange={this.handleChange} value={this.state.category} name="category"/>
+                                <label>Category</label>
+                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.category} name="category"/>
+                
 
-                <label>Calories</label>
-                <input type="text" onChange={this.handleChange} value={this.state.calories} name="calories"/>
-                <input type="submit"/>
-            </form>  
-            </div>
+                
+                                <label>Calories</label>
+                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.calories} name="calories"/>
+             
+
+                                <input className="btn btn-primary" type="submit"/>
+                                </form>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
            
         )
     }

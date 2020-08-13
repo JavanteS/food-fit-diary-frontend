@@ -12,15 +12,15 @@ class App extends Component {
 
   render(){
     
-    const meal = this.props.meals.map((meal,i)=> <li key={i}>{meal.name}</li>)
+    // const meal = this.props.meals.map((meal,i)=> <li key={i}>{meal.name}</li>)
      return (
     <div className="App">
      Food Fit Diary
 
       
-     <ul>
-       {meal}
-     </ul>
+     
+       {/* {meal} */}
+     
      <MealsContainer/>
     </div>
   );

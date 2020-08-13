@@ -12,14 +12,14 @@ class App extends Component {
 
   render(){
     
-    // const meal = this.props.meals.map((meal,i)=> <li key={i}>{meal.name}</li>)
+   
      return (
     <div className="App">
      Food Fit Diary
 
       
      
-       {/* {meal} */}
+      
      
      <MealsContainer deleteMeal={this.props.deleteMeal} meals={this.props.meals}/>
     </div>

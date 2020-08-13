@@ -16,18 +16,17 @@ class MealInput extends Component {
         this.setState({
             [event.target.name]: event.target.value
         })
-
     }
 
     handleSubmit=(event)=>{
         event.preventDefault()
         const meal = {name: this.state.name, category: this.state.category, calories: this.state.calories}
         this.props.addMeal(meal)
-        this.setState({
-            name: "",
-            category: "",
-            calories: ""
-        })
+        // this.setState({
+        //     name: "",
+        //     category: "",
+        //     calories: ""
+        // })
 
     }
 

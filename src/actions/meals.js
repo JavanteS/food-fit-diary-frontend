@@ -16,7 +16,8 @@ export const addMeal = (meal)=>{
       method: "POST",
       body: JSON.stringify(meal),
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Accept": "application/json"
       }
     })
     .then(resp => resp.json())

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MealInput from "../meals/mealinput"
+import Meals from "../meals/meals"
 
 
 class MealsContainer extends Component {

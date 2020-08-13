@@ -21,7 +21,7 @@ class App extends Component {
      
        {/* {meal} */}
      
-     <MealsContainer/>
+     <MealsContainer meals={this.props.meals}/>
     </div>
   );
   }

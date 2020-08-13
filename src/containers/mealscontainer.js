@@ -15,7 +15,6 @@ class MealsContainer extends Component {
         this.setState({
             render: !render
         })
-        // return 
     }
 
     
@@ -26,9 +25,10 @@ class MealsContainer extends Component {
         return(
            <div>
 
+               
+               <Meals meals={this.props.meals}/>
                <button type="button" className="btn btn-primary" onClick={this.handleClick}>Add Meal</button>
                {render ? <MealInput/>:null}
-            
 
         </div> 
         )

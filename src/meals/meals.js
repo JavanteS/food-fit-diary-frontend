@@ -3,7 +3,16 @@ import React, { Component } from 'react';
 class Meals extends Component {
 
     render(){
-        return 1
+        return (
+            <table className="table">
+                <thead>
+                    <th scope="col">Today's date</th>
+                </thead>
+            </table>
+        )
+            
+        
+        
     }
 }
 

@@ -66,9 +66,4 @@ class MealInput extends Component {
     }
 }
 
-// const mapDispatchToProps = dispatch => ({
-//     addMeal: name => dispatch({ type: "ADD_MEAL", name }),
-//     delete: id=> dispatch({type: "DELETE_MEAL", id})
-//   })
-
 export default connect(null, {addMeal})(MealInput);

@@ -22,11 +22,11 @@ class MealInput extends Component {
         event.preventDefault()
         const meal = {name: this.state.name, category: this.state.category, calories: this.state.calories}
         this.props.addMeal(meal)
-        // this.setState({
-        //     name: "",
-        //     category: "",
-        //     calories: ""
-        // })
+        this.setState({
+            name: "",
+            category: "",
+            calories: ""
+        })
 
     }
 
@@ -51,7 +51,7 @@ class MealInput extends Component {
 
                 
                                 <label>Calories</label>
-                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.calories} name="calories" placeholder="Calories"/>
+                                <input type="number" className="form-control" onChange={this.handleChange} value={this.state.calories < 0 ? "Can't be negative":this.state.calories} name="calories" placeholder="Calories"/>
              
                                 <hr/>
                                 <input className="btn btn-primary" type="submit"/>

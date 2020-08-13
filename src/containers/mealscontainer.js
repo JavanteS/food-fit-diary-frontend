@@ -4,7 +4,7 @@ import Meals from "../meals/meals"
 import {Route} from 'react-router-dom'
 import { connect } from 'react-redux';
 import {fetchMeals, deleteMeal} from "../actions/meals"
-
+import NavBar from '../Navbar'
 
 class MealsContainer extends Component {
 
@@ -12,29 +12,27 @@ class MealsContainer extends Component {
         this.props.fetchMeals()
       }
 
-    state={
-       render: false
-    }
+    // state={
+    //    render: false
+    // }
 
-    handleClick =()=>{
-        const { render } = this.state
-        this.setState({
-            render: !render
-        })
-    }
+    // handleClick =()=>{
+    //     const { render } = this.state
+    //     this.setState({
+    //         render: !render
+    //     })
+    // }
 
     render(){
-        const { render } = this.state
+        // const { render } = this.state
         return(
            <div>
-               
+                <NavBar/>
                 <Route path="/meals/new" component={MealInput}/>
-                <Route path="/meals" render={()=><Meals meals={this.props.meals} deleteMeal={this.props.deleteMeal} />}/>
-
+                <Route exact path="/meals" render={()=><Meals meals={this.props.meals} deleteMeal={this.props.deleteMeal} />}/>
                {/*  */}
                {/* <button type="button" className="btn btn-primary" onClick={this.handleClick}>Add Meal</button>
                {render ? <MealInput/>:null} */}
-
         </div> 
         )
         

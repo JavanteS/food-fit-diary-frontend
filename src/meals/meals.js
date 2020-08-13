@@ -12,7 +12,7 @@ class Meals extends Component {
 
             <div class="container-md">
             <ul>
-            {this.props.meals.map(meal=> <Meal key={meal.id} meal={meal}/>)}
+            {this.props.meals.map(meal=> <Meal key={meal.id} meal={meal} deleteMeal={this.props.deleteMeal} />)}
             </ul>
             </div>
 

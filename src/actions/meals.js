@@ -22,6 +22,20 @@ export const addMeal = (meal)=>{
     .then(resp => resp.json())
     .then(meal => dispatch({type:"MEAL_ADDED", payload: meal}))
   }
+}
+
+export const deleteMeal = (id)=>{
+  return(dispatch)=>{
+    dispatch({ type: "DELETING_MEAL"})
+    fetch(`/meals/${id}`,{
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    
+    .then(() => dispatch({type:"MEAL_DELETED", payload: id}))
+  }
 
 
 }

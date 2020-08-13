@@ -26,7 +26,7 @@ class MealsContainer extends Component {
            <div>
 
                
-               <Meals meals={this.props.meals}/>
+               <Meals meals={this.props.meals} deleteMeal={this.props.deleteMeal} />
                <button type="button" className="btn btn-primary" onClick={this.handleClick}>Add Meal</button>
                {render ? <MealInput/>:null}
 

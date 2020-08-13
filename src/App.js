@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {fetchMeals} from "./actions/meals"
+import {fetchMeals, deleteMeal} from "./actions/meals"
 import MealsContainer from "./containers/mealscontainer"
 import './App.css';
 
@@ -21,7 +21,7 @@ class App extends Component {
      
        {/* {meal} */}
      
-     <MealsContainer meals={this.props.meals}/>
+     <MealsContainer deleteMeal={this.props.deleteMeal} meals={this.props.meals}/>
     </div>
   );
   }
@@ -35,4 +35,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {fetchMeals})(App);
+export default connect(mapStateToProps, {fetchMeals, deleteMeal})(App);

@@ -40,7 +40,7 @@ export default (state ={
         case "MEAL_DELETED":
 
         return {
-            ...state, meals: [state.meals.filter(meal => meal.id !== action.payload)],
+            ...state, meals: [...state.meals.filter(meal => `${meal.id}` !== action.payload)],
             loading: false
         }
             

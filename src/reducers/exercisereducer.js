@@ -17,31 +17,31 @@ export default (state ={
             loading: false
         }
 
-        // case "ADDING_MEAL":
+        case "ADDING_EXERCISE":
 
-        // return {
-        //     ...state, loading: true
-        // }
+        return {
+            ...state, loading: true
+        }
 
-        // case "MEAL_ADDED":
+        case "EXERCISE_ADDED":
 
-        // return {
-        //     ...state, meals: [...state.meals, action.payload],
-        //     loading: false
-        // }
+        return {
+            ...state, exercises: [...state.exercises, action.payload],
+            loading: false
+        }
 
-        // case "DELETING_MEAL":
+        case "DELETING_EXERCISE":
 
-        // return {
-        //     ...state, loading: true
-        // }
+        return {
+            ...state, loading: true
+        }
 
-        // case "MEAL_DELETED":
+        case "EXERCISE_DELETED":
 
-        // return {
-        //     ...state, meals: [...state.meals.filter(meal => `${meal.id}` !== action.payload)],
-        //     loading: false
-        // }
+        return {
+            ...state, exercises: [...state.exercises.filter(exercise => `${exercise.id}` !== action.payload)],
+            loading: false
+        }
             
 
         default:

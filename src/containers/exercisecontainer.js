@@ -13,7 +13,7 @@ class ExerciseContainer extends Component{
     
     
     render(){
-
+        
         return (
            <div>
                {!<NavBar/> ? <NavBar/>:null}

@@ -8,3 +8,33 @@ export const fetchExercises = () => {
       })
     }
   }
+
+  export const addExercise = (exercise)=>{
+    return(dispatch)=>{
+      dispatch({ type: "ADDING_EXERCISE"})
+      fetch('/exercises',{
+        method: "POST",
+        body: JSON.stringify(exercise),
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        }
+      })
+      .then(resp => resp.json())
+      .then(exercise => dispatch({type:"MEAL_ADDED", payload: exercise}))
+    }
+  }
+  
+  export const deleteExercise = (id)=>{
+    return(dispatch)=>{
+      dispatch({ type: "DELETING_EXERCISE"})
+      fetch(`/exercises/${id}`,{
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      
+      .then(() => dispatch({type:"EXERCISE_DELETED", payload: id}))
+    }
+  }

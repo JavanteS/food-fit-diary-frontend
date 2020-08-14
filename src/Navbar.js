@@ -7,6 +7,12 @@ class NavBar extends Component{
         return(
             <div>
                 <NavLink
+                to="/"
+                exact
+                >
+                    Home
+                </NavLink>
+                <NavLink
                 to="/meals/new"
                 exact
                 >
@@ -17,6 +23,13 @@ class NavBar extends Component{
                 exact
                 >
                     Diary
+                </NavLink>
+
+                <NavLink
+                to="/workouts"
+                exact
+                >
+                    Workouts
                 </NavLink>
 
              </div>

@@ -7,6 +7,7 @@ import {fetchMeals, deleteMeal} from "../actions/meals"
 import NavBar from '../Navbar'
 
 
+
 class MealsContainer extends Component {
 
     componentDidMount(){

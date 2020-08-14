@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ExerciseInput from "../exercises/exerciseinput"
 import { connect } from 'react-redux';
-import {fetchExercises} from "../actions/exercises"
+import {fetchExercises, deleteExercise} from "../actions/exercises"
 import {Route} from 'react-router-dom'
 import NavBar from '../Navbar'
-
+import Exercises from "../exercises/exercises"
 class ExerciseContainer extends Component{
 
     componentDidMount(){
@@ -18,6 +18,7 @@ class ExerciseContainer extends Component{
            <div>
                {!<NavBar/> ? <NavBar/>:null}
                <Route path="/workouts" component={ExerciseInput}/>
+               <Exercises exercises={this.props.exercises}/>
            </div> 
         )
         
@@ -31,4 +32,4 @@ const mapStateToProps = state => {
     }
   }
 
-export default connect(mapStateToProps,{fetchExercises})(ExerciseContainer)
+export default connect(mapStateToProps,{fetchExercises, deleteExercise})(ExerciseContainer)

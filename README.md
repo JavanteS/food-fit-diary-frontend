@@ -15,6 +15,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
        run `yarn start` or 'npm start'
 
         If the browser doesn't open automatically, open http://localhost:3000 to view it in the browser. 
+        
+        Important! You should clone Food-fit-diary backend before using this repo. Here is the link to my backend https://github.com/JavanteS/food-fit-diary-backend.
        
     
   Contributing guide

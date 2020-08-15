@@ -11,6 +11,10 @@ class ExerciseContainer extends Component{
     componentDidMount(){
         this.props.fetchExercises()
       }
+
+    handleClick=(event)=>{
+        this.props.deleteExercise(event.target.id)
+    }
     
     
     render(){
@@ -19,7 +23,7 @@ class ExerciseContainer extends Component{
            <div>
                {!<NavBar/> ? <NavBar/>:null}
                <Route exact path="/workouts/new" component={ExerciseInput}/>
-               <Route exact path="/workouts" render={()=><Exercises exercises={this.props.exercises} deleteExercise={this.props.deleteExercise}/>}/>
+               <Route exact path="/workouts" render={()=><Exercises exercises={this.props.exercises} handleClick={this.handleClick} deleteExercise={this.props.deleteExercise}/>}/>
                {/* <Exercises exercises={this.props.exercises} deleteExercise={this.props.deleteExercise}/> */}
            </div>
            

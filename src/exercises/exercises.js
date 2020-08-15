@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 
 class Exercises extends Component {
 
-    handleClick=(event)=>{
-        this.props.deleteExercise(event.target.id)
-    }
+    
 
     render(){
         return (

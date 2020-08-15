@@ -14,6 +14,10 @@ class MealsContainer extends Component {
         this.props.fetchMeals()
       }
 
+    handleClick=(event)=>{
+        this.props.deleteMeal(event.target.id)
+    }
+
     // state={
     //    render: false
     // }
@@ -30,8 +34,7 @@ class MealsContainer extends Component {
         return(
            <div>
                 <NavBar/>
-                {/* <Route exact path="/" render={() => <h1>Home!</h1>}/> */}
-                <Route exact path="/meals" render={()=><Meals meals={this.props.meals} deleteMeal={this.props.deleteMeal} />}/>
+                <Route exact path="/meals" render={()=><Meals meals={this.props.meals} deleteMeal={this.props.deleteMeal} handleClick={this.handleClick} />}/>
                 <Route path="/meals/new" component={MealInput}/>
                 
                 

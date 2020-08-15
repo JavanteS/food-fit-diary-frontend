@@ -7,7 +7,7 @@ import Meal from "./meal"
 const Meals = props => <div className="container-md">
                         <div className="card">
                             <h3>Meals you had</h3>
-                            {props.meals.map((meal,index)=> <Meal key={index} meal={meal} deleteMeal={props.deleteMeal} />)}
+                            {props.meals.map((meal,index)=> <Meal key={index} meal={meal} deleteMeal={props.deleteMeal} handleClick={props.handleClick} />)}
                         </div>
                      </div>
 

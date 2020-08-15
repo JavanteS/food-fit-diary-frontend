@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import {fetchMeals, deleteMeal} from "./actions/meals"
 import MealsContainer from "./containers/mealscontainer"
 import ExerciseContainer from "./containers/exercisecontainer"
+
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
@@ -20,6 +21,7 @@ class App extends Component {
      </nav>
      <MealsContainer />
      <ExerciseContainer/>
+     
     </div>
   );
   }

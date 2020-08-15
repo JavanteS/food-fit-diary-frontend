@@ -5,7 +5,7 @@ import {Route} from 'react-router-dom'
 import { connect } from 'react-redux';
 import {fetchMeals, deleteMeal} from "../actions/meals"
 import NavBar from '../Navbar'
-
+import Home from '../Home'
 
 
 class MealsContainer extends Component {
@@ -34,7 +34,7 @@ class MealsContainer extends Component {
         return(
            <div>
                 <NavBar/>
-                
+                <Route exact path="/" component={Home}/>
                 <Route exact path="/meals" render={()=><Meals meals={this.props.meals} deleteMeal={this.props.deleteMeal} handleClick={this.handleClick} />}/>
                 <Route path="/meals/new" component={MealInput}/>
                 

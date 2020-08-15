@@ -6,12 +6,12 @@ class NavBar extends Component{
     render(){
         return(
             <div>
-                {/* <NavLink
+                <NavLink
                 to="/"
                 exact
                 >
                     Home
-                </NavLink> */}
+                </NavLink>
 
                 <NavLink
                 to="/meals"

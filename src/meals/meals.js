@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Meal from "./meal"
 
-class Meals extends Component {
 
-    renderBreakfast=()=>{
-        
-    }
 
-    render(){
-        return (
 
-            <div className="container-md">
-                <div className="card">
-                 {this.props.meals.map((meal,index)=> <Meal key={index} meal={meal} deleteMeal={this.props.deleteMeal} />)}
-                </div>
-            </div>
+const Meals = props => <div className="container-md">
+                        <div className="card">
+                            <h3>Meals you had</h3>
+                            {props.meals.map((meal,index)=> <Meal key={index} meal={meal} deleteMeal={props.deleteMeal} />)}
+                        </div>
+                     </div>
 
             // <table className="table">
             //     <thead>
@@ -29,11 +24,6 @@ class Meals extends Component {
             //     </tbody>
             // </table>
 
-        )
-            
-        
-        
-    }
-}
+    
 
 export default Meals;

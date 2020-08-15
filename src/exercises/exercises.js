@@ -1,19 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Exercise from "./exercise"
 
-
-class Exercises extends Component {
-
-    
-
-    render(){
-        return (
+const Exercises = props=>
             <div>
                 <div className="card">
                     <h3>Workouts</h3>
-                    {this.props.exercises.map((e,index) => <div key={index}><li >{e.name}</li><button onClick={this.handleClick} id={e.id}>X</button></div>)}
+                    {props.exercises.map((exercise,index) => <Exercise key={index} exercise={exercise} handleClick={props.handleClick}/>)}
                 </div>
-            </div>)
-    }
-}
+            </div>
+ 
 
 export default Exercises

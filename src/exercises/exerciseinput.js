@@ -7,7 +7,8 @@ class ExerciseInput extends Component{
     state={
         name: "",
         duration: "",
-        calories: ""
+        calories: "",
+        date: ""
     }
 
     handleChange = (event)=>{
@@ -18,12 +19,13 @@ class ExerciseInput extends Component{
 
     handleSubmit=(event)=>{
         event.preventDefault()
-        const exercise = {name: this.state.name, duration: this.state.duration, calories: this.state.calories}
+        const exercise = {name: this.state.name, duration: this.state.duration, calories: this.state.calories, date: this.state.date}
         this.props.addExercise(exercise)
         this.setState({
             name: "",
             duration: "",
-            calories: ""
+            calories: "",
+            date: ""
         })
 
     }
@@ -51,6 +53,8 @@ class ExerciseInput extends Component{
                                 <label>Calories Burned</label>
                                 <input type="number" className="form-control" onChange={this.handleChange} value={this.state.calories < 0 ? "Can't be negative":this.state.calories} name="calories" placeholder="Calories"/>
              
+                                <label>Date</label>
+                                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.date} name="date" placeholder="Enter date..."/>
                                 <hr/>
                                 <input className="btn btn-primary" type="submit"/>
                                 </form>

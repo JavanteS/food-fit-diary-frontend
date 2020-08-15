@@ -2,10 +2,21 @@
   color: rgb(0, 0, 0);
 }
 
+a {
+  color: rgb(3, 8, 70);
+  padding: 5px;
+  
+}
 
 
 .card{
   background-color: #fffcfcd5;
+}
+
+.container-small {
+  width: 700px;
+  margin-left: 400px;
+  margin-top: 20px;
 }
 
 

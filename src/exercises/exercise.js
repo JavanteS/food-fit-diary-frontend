@@ -12,7 +12,7 @@ const Exercise = props => <div className="container">
                                 {props.exercise.date}
                                 </div>
                                 <div className="col-sm">
-                                {props.exercise.calories} calories burned<button id={props.exercise.id} onClick={props.handleClick}>X</button>
+                                {props.exercise.calories} calories <button id={props.exercise.id} onClick={props.handleClick}>X</button>
                                 </div>
                             </div>
                         </div>

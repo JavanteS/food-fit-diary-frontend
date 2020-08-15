@@ -13,7 +13,7 @@ const Meal = props=>
                                 {props.meal.date}
                             </div>
                             <div className="col-sm">
-                                {props.meal.calories} calories|<button id={props.meal.id} onClick={props.handleClick}>X</button>
+                                {props.meal.calories} calories<button id={props.meal.id} onClick={props.handleClick}>X</button>
                             </div>
                         </div>
                         

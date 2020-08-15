@@ -5,8 +5,23 @@ import Meal from "./meal"
 
 
 const Meals = props => <div className="container-md">
-                        <div className="card">
-                        <div className="lead">Meals you had</div>
+                            <div className="card">
+                                <div className="lead">Meals you had</div>
+                                    <div className="row">
+                                    <div className="col sm ">
+                                    Category
+                                    </div>
+                                    <div className="col sm">
+                                    Meals
+                                    </div>
+                                    <div className="col sm">
+                                    Date
+                                    </div>
+                                    <div className="col sm">
+                                    Calories 
+                                    </div>
+                                </div>
+                                <hr/>
                             {props.meals.map((meal,index)=> <Meal key={index} meal={meal} deleteMeal={props.deleteMeal} handleClick={props.handleClick} />)}
                         </div>
                      </div>

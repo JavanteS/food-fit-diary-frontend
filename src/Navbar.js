@@ -6,30 +6,39 @@ class NavBar extends Component{
     render(){
         return(
             <div>
-                <NavLink
+                {/* <NavLink
                 to="/"
                 exact
                 >
                     Home
-                </NavLink>
-                <NavLink
-                to="/meals/new"
-                exact
-                >
-                    Form
-                </NavLink>
+                </NavLink> */}
+
                 <NavLink
                 to="/meals"
                 exact
                 >
                     Diary
                 </NavLink>
+                
+                <NavLink
+                to="/meals/new"
+                exact
+                >
+                    Log your Meal
+                </NavLink>
+                
 
+                <NavLink
+                to="/workouts/new"
+                exact
+                >
+                    Log your Workout
+                </NavLink>
                 <NavLink
                 to="/workouts"
                 exact
                 >
-                    Workouts
+                    Workout Diary
                 </NavLink>
 
              </div>

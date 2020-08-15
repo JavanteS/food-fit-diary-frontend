@@ -21,7 +21,7 @@ export const fetchExercises = () => {
         }
       })
       .then(resp => resp.json())
-      .then(exercise => dispatch({type:"MEAL_ADDED", payload: exercise}))
+      .then(exercise => dispatch({type:"EXERCISE_ADDED", payload: exercise}))
     }
   }
   

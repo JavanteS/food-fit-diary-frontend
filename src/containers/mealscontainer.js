@@ -30,9 +30,10 @@ class MealsContainer extends Component {
         return(
            <div>
                 <NavBar/>
-                <Route exact path="/" render={() => <h1>Home!</h1>}/>
-                <Route path="/meals/new" component={MealInput}/>
+                {/* <Route exact path="/" render={() => <h1>Home!</h1>}/> */}
                 <Route exact path="/meals" render={()=><Meals meals={this.props.meals} deleteMeal={this.props.deleteMeal} />}/>
+                <Route path="/meals/new" component={MealInput}/>
+                
                 
                {/*  */}
                {/* <button type="button" className="btn btn-primary" onClick={this.handleClick}>Add Meal</button>

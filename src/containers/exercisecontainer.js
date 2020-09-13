@@ -24,7 +24,6 @@ class ExerciseContainer extends Component{
                {!<NavBar/> ? <NavBar/>:null}
                <Route exact path="/workouts/new" component={ExerciseInput}/>
                <Route exact path="/workouts" render={()=><Exercises exercises={this.props.exercises} handleClick={this.handleClick} deleteExercise={this.props.deleteExercise}/>}/>
-               {/* <Exercises exercises={this.props.exercises} deleteExercise={this.props.deleteExercise}/> */}
            </div>
            
                

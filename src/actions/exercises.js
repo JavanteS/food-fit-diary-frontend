@@ -9,6 +9,19 @@ export const fetchExercises = () => {
     }
   }
 
+  const exerciseAdded = (exercise) => {
+    fetch('/exercises',{
+      method: "POST",
+      body: JSON.stringify(exercise),
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      }
+    }).then(resp => resp.json()).then(e => e )
+
+    return {type:"EXERCISE_ADDED", payload: exercise}
+  }
+
   export const addExercise = (exercise)=>{
     return(dispatch)=>{
       dispatch({ type: "ADDING_EXERCISE"})
@@ -21,7 +34,7 @@ export const fetchExercises = () => {
         }
       })
       .then(resp => resp.json())
-      .then(exercise => dispatch({type:"EXERCISE_ADDED", payload: exercise}))
+      .then(exercise => dispatch(exerciseAdded(exercise)))
     }
   }
   

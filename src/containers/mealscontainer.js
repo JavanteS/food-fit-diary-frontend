@@ -18,30 +18,16 @@ class MealsContainer extends Component {
         this.props.deleteMeal(event.target.id)
     }
 
-    // state={
-    //    render: false
-    // }
-
-    // handleClick =()=>{
-    //     const { render } = this.state
-    //     this.setState({
-    //         render: !render
-    //     })
-    // }
+   
 
     render(){
-        // const { render } = this.state
+        
         return(
            <div>
                 <NavBar/>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/meals" render={()=><Meals meals={this.props.meals} deleteMeal={this.props.deleteMeal} handleClick={this.handleClick} />}/>
                 <Route path="/meals/new" component={MealInput}/>
-                
-                
-               {/*  */}
-               {/* <button type="button" className="btn btn-primary" onClick={this.handleClick}>Add Meal</button>
-               {render ? <MealInput/>:null} */}
         </div> 
         )
         

@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Exercise from "./exercise"
 
-const Exercises = props=>
-            <div className="container-md">
+
+
+
+class Exercises extends Component{
+            
+            render(){
+                return (
+                    <div className="container-md">
                 <div className="card">
                     <div className="lead">Workouts</div>
                     <div className="row">
@@ -20,9 +26,13 @@ const Exercises = props=>
                     </div>
                     </div>
                     <hr/>
-                    {props.exercises.map((exercise,index) => <Exercise key={index} exercise={exercise} handleClick={props.handleClick}/>)}
+                    {this.props.exercises.map((exercise,index) => <Exercise key={index} exercise={exercise} handleClick={this.props.handleClick}/>)}
                 </div>
-            </div>
+            </div> 
+                )
+            }
+            
+           
  
-
+}
 export default Exercises

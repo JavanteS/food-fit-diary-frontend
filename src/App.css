@@ -30,6 +30,12 @@ a {
   pointer-events: none;
 }
 
+.Search{
+  margin-right: 400px;
+  
+
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
